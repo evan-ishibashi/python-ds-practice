@@ -28,3 +28,23 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
           ...
         ValueError: Invalid Operation
     """
+    from math import trunc
+    valid_ops = ['add', 'subtract', 'multiply', 'divide']
+    raw_answer = 0
+    if operation not in valid_ops:
+        raise ValueError("Invalid Operation")
+
+    if operation == 'add':
+        raw_answer = a + b
+    elif operation == 'subtract':
+        raw_answer = a - b
+    elif operation == 'multiply':
+        raw_answer = a * b
+    elif operation == 'divide':
+        raw_answer = a / b
+
+    if make_int:
+        raw_answer = trunc(raw_answer)
+
+    return message + " " + str(raw_answer)
+
