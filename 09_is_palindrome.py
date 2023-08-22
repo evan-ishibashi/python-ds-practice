@@ -21,3 +21,13 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    #TODO: refactor with slicing trick
+    alt_phrase = phrase.lower().replace(" ", "")
+
+    standard = list(alt_phrase)
+
+    reversed = list(alt_phrase)
+
+    reversed.reverse()
+
+    return standard == reversed

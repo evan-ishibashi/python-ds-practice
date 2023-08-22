@@ -11,9 +11,12 @@ def single_letter_count(word, letter):
         3
     """
 
-    count = 0
+    # count = 0
+    # lower_word = word.lower()
+    # for char in lower_word:
+    #     if char == letter:
+    #         count+= 1
+    # return count
+
     lower_word = word.lower()
-    for char in lower_word:
-        if char == letter:
-            count+= 1
-    return count
+    return lower_word.count(letter.lower())

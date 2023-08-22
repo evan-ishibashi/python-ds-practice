@@ -12,6 +12,7 @@ def last_element(lst):
         >>> nums == [1, 2, 3]
         True
     """
+    #TODO: refactor to account for empty list being falsy
     if len(lst) == 0:
         return None
     else:

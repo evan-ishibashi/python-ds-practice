@@ -8,6 +8,7 @@ def reverse_string(phrase):
         'ecuas'
     """
     #some way to do this with a slice?
+    reversed_string = phrase[::-1]
     my_word = ''
     counter = len(phrase) - 1
     while (counter >= 0):
